@@ -14,13 +14,17 @@
 	IBOutlet RootViewController *rootViewController;
 	NSMutableArray *daysByMonth;
 	float maxRevenue;
+	NSMutableArray *revenueByMonth;
 	NSDateFormatter *sectionTitleFormatter;
 }
 
 @property (retain) NSMutableArray *daysByMonth;
 @property (assign) float maxRevenue;
+@property (retain) NSMutableArray *revenueByMonth;
 @property (retain) NSDateFormatter *sectionTitleFormatter;
 
 - (void)reload;
+- (float)addSection:(NSInteger)section revenue:(float)revenue;
+- (NSNumber*)sectionRevenue:(NSInteger)section;
 
 @end

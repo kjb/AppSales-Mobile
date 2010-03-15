@@ -11,6 +11,7 @@
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		286B8498114DE7B000AC11ED /* UITableView-SectionTitleBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 286B8497114DE7B000AC11ED /* UITableView-SectionTitleBackground.png */; };
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
 		345D1A480F3174DC002AB336 /* AbstractDayOrWeekController.m in Sources */ = {isa = PBXBuildFile; fileRef = 345D1A470F3174DC002AB336 /* AbstractDayOrWeekController.m */; };
@@ -298,6 +299,7 @@
 		1D3623250D0F684500981E51 /* AppSalesMobileAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppSalesMobileAppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* AppSalesMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppSalesMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		286B8497114DE7B000AC11ED /* UITableView-SectionTitleBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UITableView-SectionTitleBackground.png"; sourceTree = "<group>"; };
 		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28A0AAE50D9B0CCF005BE974 /* AppSalesMobile_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSalesMobile_Prefix.pch; sourceTree = "<group>"; };
 		28C286DF0D94DF7D0034E888 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
@@ -707,6 +709,7 @@
 		7F4C217510230EF200F17F7D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				286B8497114DE7B000AC11ED /* UITableView-SectionTitleBackground.png */,
 				7FEA5AA8105B61CD000A12E6 /* 5stars.png */,
 				7FEA5C2B105C1A57000A12E6 /* 5stars_gray.png */,
 				7F4C217610230EF200F17F7D /* About.png */,
@@ -1396,6 +1399,7 @@
 				7FEA5B40105B6CD2000A12E6 /* ReviewTemplate.html in Resources */,
 				7FEA5C2C105C1A57000A12E6 /* 5stars_gray.png in Resources */,
 				7F47897810661CBD002415A2 /* Entitlements.plist in Resources */,
+				286B8498114DE7B000AC11ED /* UITableView-SectionTitleBackground.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

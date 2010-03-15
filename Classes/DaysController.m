@@ -52,9 +52,12 @@
 - (void)reload
 {
 	self.daysByMonth = [NSMutableArray array];
+        self.revenueByMonth = [NSMutableArray array];
 	NSSortDescriptor *dateSorter = [[[NSSortDescriptor alloc] initWithKey:@"date" ascending:NO] autorelease];
 	NSArray *sortedDays = [[[ReportManager sharedManager].days allValues] sortedArrayUsingDescriptors:[NSArray arrayWithObject:dateSorter]];
 	int lastMonth = -1;
+	int section = -1;
+        float totalRevenue = 0;
 
 	for (Day *d in sortedDays) {
 		NSDate *date = d.date;
@@ -63,9 +66,21 @@
 		if (month != lastMonth) {
 			[daysByMonth addObject:[NSMutableArray array]];
 			lastMonth = month;
+			section += 1;
 		}
 		[[daysByMonth lastObject] addObject:d];
+                [self addSection: section revenue: [d totalRevenueInBaseCurrency]];
+                totalRevenue += [d totalRevenueInBaseCurrency];
 	}
+        
+        if ( section > 0 )
+        {
+          self.tableView.tableHeaderView =
+            [self compositeViewLabel:@"Grand total"
+                  value:[[CurrencyManager sharedManager]
+                          baseCurrencyDescriptionForAmount:[NSString stringWithFormat:@"%1.2f", totalRevenue]]];
+        }
+                                               
 	[self.tableView reloadData];
 }
 
@@ -136,6 +151,7 @@
 - (void)dealloc 
 {
 	self.daysByMonth = nil;
+	self.revenueByMonth = nil;
     [super dealloc];
 }
 
